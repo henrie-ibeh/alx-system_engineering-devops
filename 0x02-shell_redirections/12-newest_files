@@ -1,2 +1,2 @@
 #!/bin/bash
-echo {a..z}{a..z} | tr """\n" | grep -v "oo"
+find /tmp -type f -mtime 10 | ls -ltsha | sort | head -n 10
