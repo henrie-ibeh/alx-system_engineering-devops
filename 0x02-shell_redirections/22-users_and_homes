@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -oP '^[^:]+|.*:\K[^:]+(?=:[^:]+)' /etc/password | sort
+awk -F'[:/]' '$7=="home"{ print $1 }' /etc/passwd
